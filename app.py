@@ -11,9 +11,10 @@ from pathlib import Path
 
 app = Flask(
     __name__,
-    template_folder="../Heartfrontend/templates",
-    static_folder="../Heartfrontend/static"
+    template_folder="templates",
+    static_folder="static"
 )
+
 app.config['JSON_SORT_KEYS'] = False
 # Simple session secret for login - in production use a secure secret and env var
 app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'change-this-secret')
