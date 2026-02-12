@@ -1,8 +1,3 @@
-"""
-Heart Disease Prediction System - Flask Application (MODIFIED)
-Shows: Percentage chance + Health Precautions + Diet Plan
-"""
-
 from flask import Flask, render_template, request, jsonify, session
 import json
 import sqlite3
@@ -14,13 +9,16 @@ from pathlib import Path
 
 # ==================== FLASK APP INITIALIZATION ====================
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="../Heartfrontend/templates",
+    static_folder="../Heartfrontend/static"
+)
 app.config['JSON_SORT_KEYS'] = False
 # Simple session secret for login - in production use a secure secret and env var
 app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'change-this-secret')
 
 # ==================== PATHS ====================
-
 BASE_DIR = Path(__file__).parent
 MODELS_DIR = BASE_DIR / 'models'
 DATABASE_PATH = BASE_DIR / 'database' / 'heart_disease.db'
