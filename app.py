@@ -576,7 +576,7 @@ if __name__ == '__main__':
     
     # Run Flask app
     print("=" * 60)
-    print("HEARTGUARD - ADVANCED RISK ASSESSMENT")
+    print("HEARTGUARD")
     print("=" * 60)
     print("[SERVER] Server running on http://localhost:5000")
     print("Press CTRL+C to stop")
