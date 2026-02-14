@@ -221,29 +221,30 @@ function showResults(data, inputData) {
     circle.style.strokeDashoffset = offset;
     document.getElementById('riskPercentage').innerText = `${percent}%`;
 
-    // Colors
-    let color = 'var(--success)';
-    let badgeBg = '#dcfce7';
-    let badgeText = '#166534';
+    // Classes & Level Text
+    let riskClass = 'low';
     let levelText = 'Low Risk';
+    let color = '#34d399'; // Emerald
 
     if (percent >= 34) {
-        color = 'var(--warning)';
-        badgeBg = '#fef3c7';
-        badgeText = '#92400e';
+        riskClass = 'moderate';
         levelText = 'Moderate Risk';
+        color = '#fbbf24'; // Amber
     }
     if (percent >= 67) {
-        color = 'var(--danger)';
-        badgeBg = '#fee2e2';
-        badgeText = '#991b1b';
+        riskClass = 'high';
         levelText = 'High Risk';
+        color = '#f87171'; // Red
     }
 
     circle.style.stroke = color;
     const riskBadge = document.getElementById('riskLevelText');
-    riskBadge.style.backgroundColor = badgeBg;
-    riskBadge.style.color = badgeText;
+
+    // Clear old classes and add new one
+    riskBadge.classList.remove('low', 'moderate', 'high');
+    riskBadge.classList.add(riskClass);
+    riskBadge.style.backgroundColor = ''; // Clear inline styles
+    riskBadge.style.color = '';
     riskBadge.innerText = levelText;
 
     document.getElementById('riskMessage').innerText = data.message;
