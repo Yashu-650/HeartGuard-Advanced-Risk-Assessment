@@ -1663,6 +1663,60 @@ table tbody tr:hover {
         color: #9ca3af;
         cursor: pointer;
     }
+
+    /* Form Mobile Fixes */
+    .form-step {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .form-step h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .span-2 {
+        grid-column: span 1;
+    }
+
+    /* Stepper Mobile Fixes */
+    .stepper {
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+    }
+
+    .step-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .step-label {
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .step-line {
+        margin-top: 18px;
+    }
+
+    /* Buttons Mobile Fixes */
+    .form-actions {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1.5rem;
+    }
 }
 
 .hidden {
