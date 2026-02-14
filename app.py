@@ -8,6 +8,13 @@ from datetime import datetime
 import os
 from pathlib import Path
 
+# Print environment info for debugging
+import sklearn
+import numpy
+print(f"[DEBUG] Python version: {os.sys.version}")
+print(f"[DEBUG] Scikit-learn version: {sklearn.__version__}")
+print(f"[DEBUG] Numpy version: {numpy.__version__}")
+
 # ==================== FLASK APP INITIALIZATION ====================
 
 app = Flask(
