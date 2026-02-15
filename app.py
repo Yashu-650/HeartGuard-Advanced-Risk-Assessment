@@ -346,21 +346,13 @@ def predict():
             data['thalassemia']
         ]
         
-        # Use pandas DataFrame to include feature names and avoid scikit-learn warnings
-        import pandas as pd
-        feature_names = MODELS.get('feature_names')
-        if feature_names:
-            features = pd.DataFrame([input_data], columns=feature_names)
-        else:
-            features = np.array([input_data])
+        # Convert to numpy array for consistent model input
+        features = np.array([input_data])
         
         # Scale features if scaler available
         try:
             if 'scaler' in MODELS:
                 scaled_features = MODELS['scaler'].transform(features)
-                # Keep as DataFrame if original was DataFrame
-                if feature_names:
-                    scaled_features = pd.DataFrame(scaled_features, columns=feature_names)
             else:
                 scaled_features = features
         except Exception as e:
@@ -368,6 +360,7 @@ def predict():
             scaled_features = features
         
         # Get predictions from all available models
+        # Using numpy arrays to avoid sklearn feature name warnings
         predictions = {}
         
         if 'knn' in MODELS:
