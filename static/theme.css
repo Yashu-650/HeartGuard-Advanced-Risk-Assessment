@@ -2409,6 +2409,229 @@ table tbody tr:hover {
 }
 
 /* ========================= */
+/* MOBILE RESPONSIVE STYLES */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    /* Headings adjustments */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        padding: 0.6rem 1.2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+        padding: 2rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    /* Feature Grid */
+    .feature-grid-home {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .feature-item {
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .feature-item span {
+        font-size: 0.9rem;
+    }
+
+    /* Stats Bar */
+    .stats-bar-premium {
+        gap: 1rem;
+    }
+
+    .stat-pill {
+        min-width: 150px;
+        padding: 1rem;
+    }
+
+    .stat-val {
+        font-size: 1.3rem;
+    }
+
+    .stat-lab {
+        font-size: 0.75rem;
+    }
+
+    /* Doctor Card */
+    .doctor-card {
+        padding: 1.2rem;
+    }
+
+    .doc-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .doc-info h4 {
+        font-size: 1rem;
+    }
+
+    .doc-info p {
+        font-size: 0.8rem;
+    }
+
+    /* Forms */
+    .form-step {
+        padding: 2rem 1.5rem;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-step h3 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .input-wrapper input,
+    .input-wrapper select {
+        padding: 0.9rem 1.2rem 0.9rem 3rem;
+        font-size: 0.95rem;
+    }
+
+    .input-wrapper i {
+        left: 1.2rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.9rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    /* Stepper */
+    .stepper {
+        padding: 0 0.5rem;
+    }
+
+    .step-circle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .step-label {
+        font-size: 0.8rem;
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem 2rem 2.5rem;
+        margin: 5% auto;
+    }
+
+    .login-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .login-icon-large {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Extra small devices */
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .feature-grid-home {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        padding: 1.2rem;
+    }
+
+    .stats-bar-premium {
+        flex-direction: column;
+    }
+
+    .stat-pill {
+        width: 100%;
+    }
+
+    .form-step {
+        padding: 1.5rem 1rem;
+    }
+
+    .form-step h3 {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================= */
 /* AI CHAT MODAL STYLES */
 /* ========================= */
 
@@ -2742,25 +2965,154 @@ table tbody tr:hover {
 @media (max-width: 768px) {
     .chat-modal-container {
         max-width: 100%;
-        height: 90vh;
-        max-height: none;
+        height: 100vh;
+        max-height: 100vh;
         border-radius: 0;
+        margin: 0;
     }
 
     .chat-header {
         border-radius: 0;
+        padding: 1rem;
+    }
+
+    .chat-avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .chat-header-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .chat-status {
+        font-size: 0.8rem;
+    }
+
+    .chat-messages {
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+
+    .message-content {
+        max-width: 80%;
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .message-content ul {
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .message-content li {
+        margin: 0.3rem 0;
+    }
+
+    .message-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .chat-suggestions {
+        padding: 0 1rem;
+        gap: 0.6rem;
+        flex-direction: column;
+    }
+
+    .suggestion-btn {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.2rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .suggestion-btn i {
+        font-size: 1rem;
+    }
+
+    .chat-input-container {
+        padding: 1rem;
+    }
+
+    #chatInput {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-send-message {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    .chat-disclaimer {
+        font-size: 0.7rem;
+        margin-top: 0.6rem;
+    }
+
+    .typing-indicator {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .typing-dots {
+        padding: 0.9rem 1.2rem;
+    }
+
+    .close-modal {
+        font-size: 1.8rem;
+        right: 1rem;
+        top: 1rem;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .chat-header {
+        padding: 0.8rem;
+    }
+
+    .chat-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chat-header-text h3 {
+        font-size: 1rem;
+    }
+
+    .chat-status {
+        font-size: 0.75rem;
+    }
+
+    .chat-messages {
+        padding: 0.8rem;
     }
 
     .message-content {
         max-width: 85%;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        border-radius: 12px 12px 12px 3px;
     }
 
-    .chat-suggestions {
-        justify-content: center;
+    .user-message .message-content {
+        border-radius: 12px 12px 3px 12px;
     }
 
     .suggestion-btn {
         font-size: 0.85rem;
-        padding: 0.6rem 1rem;
+        padding: 0.7rem 1rem;
+    }
+
+    #chatInput {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-send-message {
+        width: 40px;
+        height: 40px;
     }
 }
